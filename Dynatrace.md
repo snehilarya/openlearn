@@ -3,14 +3,18 @@
 
 ## Getting access to Dynatrace
 
-You can use this link to get access to the Dynatrace.
+You can use this link to get CAM access one of Dynatrace Account based on your need.
+
+https://saphealthengineering.cfapps.eu10.hana.ondemand.com/operational/monitoring/dynatrace/#sap-health-dynatrace-accounts
 
   - Get access to SAP Health Dynatrace (Canary) for SAP Health development and pipeline monitoring.
   - Get access to SAP Health Dynatrace (EU10) for all SAP Health prod accounts monitoring.
 
-https://saphealthengineering.cfapps.eu10.hana.ondemand.com/operational/monitoring/dynatrace/#sap-health-dynatrace-accounts
+**Note: EU10 access is only for monitoring prod applications use canary for any personal testing.**  
 
 ## Get Environment ID and PaaS-Token from Dynatrace
+
+Once you have access to Canary Account you can follow below steps for monitoring your space.
 
 The Dynatrace Agent is downloaded from the Dynatrace cluster during the application staging phase (via the buildpack). For this to work you need to pass the cluster hostname, the environment ID and a PaaS token to the application, so that the agent can be downloaded from the correct cluster. 
 
