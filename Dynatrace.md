@@ -56,5 +56,10 @@ By binding the previously created service to app, you make the Dynatrace credent
 2. Bind the service to your app with `cf bind-service <app-name> dynatrace-service-<D/I number>`.
 3. Restage the app via `cf restage <app-name>`.
 
+### Execute some requests against your app
 
-### Note
+## Explore in Dynatrace
+
+Open the "Transaction & services" tab in Dynatrace and check if you see a service called "AlbumController" (it might take two minutes for the service to show up). 
+
+If you can see it your instrumentation was successful and Dynatrace received service metrics.
