@@ -60,6 +60,36 @@ By binding the previously created service to app, you make the Dynatrace credent
 
 ## Explore in Dynatrace
 
-Open the "Transaction & services" tab in Dynatrace and check if you see a service called "AlbumController" (it might take two minutes for the service to show up). 
+### Hosts
 
-If you can see it your instrumentation was successful and Dynatrace received service metrics.
+Host performance is tracked across multiple Dynatrace pages, beginning with high-level health metrics on the home dashboard and extending down to dedicated pages for each of your hosts.
+
+Individual Host pages show problem history, event history, and related processes for each host. To assess health, the following performance metrics are captured for each host and presented on each Host overview page:
+
+- CPU
+- Memory
+- Disk (storage health)
+- NIC (network health)
+- Network services (currently, DNS performance)
+
+![image](https://user-images.githubusercontent.com/25520466/127394120-b8ea3eeb-d5a8-415e-81d0-87c93697cc96.png)
+
+### Process Groups (Technologies)
+
+Dynatrace automatically merges related processes into process groups. A “process group” is a logical cluster of processes that belong to the same application or deployment unit and perform the same function across multiple hosts.
+
+The Technology overview page provides a consolidated overview of the health and performance of all monitored technologies in your environment. To access the Technology overview page, select Technologies from the navigation menu.
+In the example below, there is a Java process group that's composed of 2 process group instances. This process group has periodic CPU consumption spikes, with one of the process group instances consuming 39% of CPU while the same processes on another machine are consuming only 1.68% of available CPU.
+
+![image](https://user-images.githubusercontent.com/25520466/127394785-a5e00785-8bcc-428c-b806-1ce3e1369581.png)
+
+Select Process group details to access process group view, which includes comprehensive metric categories, such as:
+
+- System performance (memory and CPU),
+- Networking (connectivity and retransmissions),
+- Technology-specific metrics (GC time, suspension).
+- Log files
+
+### Transactions and services
+
+Dynatrace monitors all of your application's services, processes, and infrastructure. By evaluating all such components collectively, Dynatrace is able to pinpoint exactly how each service contributes to the performance of your application.
